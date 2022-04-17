@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://res.cloudinary.com/dpxek6oka/raw/upload/v1643485116/normalize_ej2ndq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/images/Vector.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <title>Encriptador y desencriptador de texto</title>
+</head>
+<body>
+    <header class="container-header">
+        <img src="assets/images/Vector.webp" alt="" decoding="async" loading="lazy" class="container-header__img">
+    </header>
+
+    <main class="container-main">
+        <section class="container-section-encrypt-text">
+            <form class="container-form-text">
+                <textarea name="mensaje" id="mensaje" cols="30" rows="8" placeholder="Ingrese el texto aqui" class="container-form-text__textarea" autofocus></textarea>
+            </form>
+
+            <article class="container-buttons">
+                <p class="container-info-encrypt-text">
+                    <i class="fa-solid fa-circle-info container-info-encrypt-text__icon" aria-hidden="true"></i>
+                    Solo letras minúsculas y sin acentos
+                </p>
+    
+                <button class="container-buttons__btn">
+                    Encriptar
+                </button>
+    
+                <button class="container-buttons__btn container-buttons__btn--color">
+                    Desencriptar
+                </button>
+            </article>
+        </section>
+
+        <section class="container-section-result">
+            <article class="container-info-result-encrypt-text">
+                <img src="assets/images/Muñeco.webp" alt="" decoding="async" loading="lazy" aria-hidden="true" class="container-info-result-encrypt-text__img">
+                <p class="container-info-result-encrypt-text__paragrahp container-info-result-encrypt-text__paragrahp--size">
+                    Ningún mensaje fue encontrado
+                </p>
+                <p class="container-info-result-encrypt-text__paragrahp">
+                    Ingresa el texto que desees encriptar o desencriptar.
+                </p>
+            </article>
+
+<!--             <article class="container-info-result-encrypt-text">
+                <p></p>
+
+                <button>
+                    Copiar
+                </button>
+            </article> -->
+        </section>
+    </main>
+
+    <footer class="container-footer">
+        <p class="container-info-footer">
+           &copy 
+           <a href="https://github.com/DanielAlfaro2222" target="_blank" rel="noopener" class="container-info-footer__link">
+               Daniel Alfaro
+            </a>
+           2022
+        </p>
+    </footer>
+</body>
+</html>
