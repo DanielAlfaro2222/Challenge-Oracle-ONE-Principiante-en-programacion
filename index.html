@@ -21,7 +21,7 @@
     <main class="container-main">
         <section class="container-section-encrypt-text">
             <form class="container-form-text">
-                <textarea name="mensaje" id="mensaje" cols="30" rows="8" placeholder="Ingrese el texto aqui" class="container-form-text__textarea" autofocus></textarea>
+                <textarea name="mensaje" id="mensaje_a_convertir" cols="30" rows="8" placeholder="Ingrese el texto aqui" class="container-form-text__textarea" autofocus></textarea>
             </form>
 
             <article class="container-buttons">
@@ -30,34 +30,34 @@
                     Solo letras minúsculas y sin acentos
                 </p>
     
-                <button class="container-buttons__btn">
+                <button class="container-buttons__btn" id="btn-encriptar-texto">
                     Encriptar
                 </button>
     
-                <button class="container-buttons__btn container-buttons__btn--color">
+                <button class="container-buttons__btn container-buttons__btn--color" id="btn-desencriptar-texto">
                     Desencriptar
                 </button>
             </article>
         </section>
 
         <section class="container-section-result">
-            <article class="container-info-result-encrypt-text">
+            <article class="container-info-result-encrypt-text" id="article-text-info">
                 <img src="assets/images/Muñeco.webp" alt="" decoding="async" loading="lazy" aria-hidden="true" class="container-info-result-encrypt-text__img">
                 <p class="container-info-result-encrypt-text__paragrahp container-info-result-encrypt-text__paragrahp--size">
-                    Ningún mensaje fue encontrado
+                    Ningún mensaje encontrado
                 </p>
                 <p class="container-info-result-encrypt-text__paragrahp">
                     Ingresa el texto que desees encriptar o desencriptar.
                 </p>
             </article>
 
-<!--             <article class="container-info-result-encrypt-text">
-                <p></p>
+            <article class="container-info-result-encrypt-text container-info-result-encrypt-text--ocult" id="article-text-result">
+                <textarea id="result-encrypt-text" cols="30" rows="10" class="container-info-result-encrypt-text__textarea" readonly></textarea>
 
-                <button>
+                <button class="container-info-result-encrypt-text__btn" id="btn-copiar-texto-encriptado"> 
                     Copiar
                 </button>
-            </article> -->
+            </article>
         </section>
     </main>
 
@@ -70,5 +70,7 @@
            2022
         </p>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
