@@ -10,18 +10,19 @@ const botonCopiarTextoEncriptado = document.getElementById('btn-copiar-texto-enc
 const botonLimpiar = document.getElementById('btn-limpiar-todo');
 
 function encriptarTexto(texto) {
-    let caracteres = texto.split('');
+    const letrasAEncriptar = {
+        e: 'enter',
+        i: 'imes',
+        a: 'ai',
+        o: 'ober',
+        u: 'ufat'
+    };
 
-    caracteres = caracteres.map( caracter => {
-        if (caracter === 'e') return 'enter';
-        else if (caracter === 'i') return 'imes';
-        else if (caracter === 'a') return 'ai';
-        else if (caracter === 'o') return 'ober';
-        else if (caracter === 'u') return 'ufat';
-        else return caracter;
-    }); 
-  
-  return caracteres.join('');
+    for (let key in letrasAEncriptar) {
+        texto = texto.replaceAll(key, letrasAEncriptar[key]);
+    }
+
+    return texto;
 }
 
 function desencriptarTexto(texto) {
@@ -41,12 +42,13 @@ function desencriptarTexto(texto) {
 }
 
 function validarDatosDeEntrada(texto) {
-    const caracteresNoPermitidos = "@©°ñ«»—¿½®™§¶†‡±~µ÷·•Ø‰_:Ñ][¨*¡=)(/&%$#æ@ł€¶ŧ←↓→øþłĸłĸ̉ħŋħŋŋđđððßææ«»¢“”nµ─·̣áéíóú";
+    const caracteresNoPermitidos = "@©°ñ«»—¿½®™§¶†‡±~µ÷·•Ø‰_:Ñ][¨*¡=)(/&%$#æ@ł€¶ŧ←↓→øþłĸłĸ̉ħŋħŋŋđđððßææ«»¢“”µ─·̣áéíóú";
 
     let textoCorrecto = true;
 
     for (let palabra of texto.split('')) {
         if (caracteresNoPermitidos.includes(palabra)) {
+            console.log(palabra)
             textoCorrecto = false;
             return textoCorrecto;
         }
